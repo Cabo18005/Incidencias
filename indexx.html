@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <!-- Enlazando con Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-header h2 {
+            color: #007bff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-header">
+            <h2>Formulario de Registro</h2>
+            <p>Llena los campos según corresponda</p>
+        </div>
+
+        <form action="generar_pdf.php" method="POST">
+            <!-- PASES ENTRADA-SALIDA -->
+            <h4>PASES ENTRADA-SALIDA</h4>
+            <div class="form-group">
+                <label for="pass_num">Nº:</label>
+                <input type="text" class="form-control" id="pass_num" name="pass_num[]">
+            </div>
+            <div class="form-group">
+                <label for="pass_matricula">Matrícula:</label>
+                <input type="text" class="form-control" id="pass_matricula" name="pass_matricula[]">
+            </div>
+            <div class="form-group">
+                <label for="pass_nombre">Nombre:</label>
+                <input type="text" class="form-control" id="pass_nombre" name="pass_nombre[]">
+            </div>
+            <div class="form-group">
+                <label for="pass_categoria">Categoría:</label>
+                <input type="text" class="form-control" id="pass_categoria" name="pass_categoria[]">
+            </div>
+            <div class="form-group">
+                <label for="pass_fecha">Fecha:</label>
+                <input type="date" class="form-control" id="pass_fecha" name="pass_fecha[]">
+            </div>
+            <div class="form-group">
+                <label for="pass_entrada">Entrada:</label>
+                <input type="time" class="form-control" id="pass_entrada" name="pass_entrada[]">
+            </div>
+            <div class="form-group">
+                <label for="pass_salida">Salida:</label>
+                <input type="time" class="form-control" id="pass_salida" name="pass_salida[]">
+            </div>
+
+            <!-- INCIDENCIAS DIARIAS -->
+            <h4>INCIDENCIAS DIARIAS</h4>
+            <div class="form-group">
+                <label for="inc_num">Nº:</label>
+                <input type="text" class="form-control" id="inc_num" name="inc_num[]">
+            </div>
+            <div class="form-group">
+                <label for="inc_matricula">Matrícula:</label>
+                <input type="text" class="form-control" id="inc_matricula" name="inc_matricula[]">
+            </div>
+            <div class="form-group">
+                <label for="inc_nombre">Nombre:</label>
+                <input type="text" class="form-control" id="inc_nombre" name="inc_nombre[]">
+            </div>
+            <div class="form-group">
+                <label for="inc_categoria">Categoría:</label>
+                <input type="text" class="form-control" id="inc_categoria" name="inc_categoria[]">
+            </div>
+            <div class="form-group">
+                <label for="inc_fecha">Fecha:</label>
+                <input type="date" class="form-control" id="inc_fecha" name="inc_fecha[]">
+            </div>
+            <div class="form-group">
+                <label for="inc_justificacion">Justificación:</label>
+                <input type="text" class="form-control" id="inc_justificacion" name="inc_justificacion[]">
+            </div>
+
+            <!-- RETARDOS -->
+            <h4>RETARDOS</h4>
+            <div class="form-group">
+                <label for="ret_num">Nº:</label>
+                <input type="text" class="form-control" id="ret_num" name="ret_num[]">
+            </div>
+            <div class="form-group">
+                <label for="ret_matricula">Matrícula:</label>
+                <input type="text" class="form-control" id="ret_matricula" name="ret_matricula[]">
+            </div>
+            <div class="form-group">
+                <label for="ret_nombre">Nombre:</label>
+                <input type="text" class="form-control" id="ret_nombre" name="ret_nombre[]">
+            </div>
+            <div class="form-group">
+                <label for="ret_categoria">Categoría:</label>
+                <input type="text" class="form-control" id="ret_categoria" name="ret_categoria[]">
+            </div>
+            <div class="form-group">
+                <label for="ret_fecha">Fecha:</label>
+                <input type="date" class="form-control" id="ret_fecha" name="ret_fecha[]">
+            </div>
+            <div class="form-group">
+                <label for="ret_entrada">Entrada:</label>
+                <input type="time" class="form-control" id="ret_entrada" name="ret_entrada[]">
+            </div>
+            <div class="form-group">
+                <label for="ret_salida">Salida:</label>
+                <input type="time" class="form-control" id="ret_salida" name="ret_salida[]">
+            </div>
+
+            <!-- Enviar Formulario -->
+            <button type="submit" class="btn btn-primary btn-block">Generar PDF</button>
+        </form>
+    </div>
+
+    <!-- Enlazando Bootstrap JS y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
